@@ -42,6 +42,14 @@ class TicTacToe
     @index = input.to_i - 1
   end
   
+  def move_on_board?(board, index)
+    if @index >= 0 && @index <= 8
+      true 
+    else
+      false
+    end
+  end 
+  
   def position_taken?(index)
     !(@board[index].nil? || @board[index] == " ")
   end
