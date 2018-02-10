@@ -66,6 +66,16 @@ class TicTacToe
     @board[index] = char
   end
   
+  def full?(board)
+    return_val = true
+    board.each_index do |cell| 
+      if !position_taken?(board, cell)
+        return_val = false
+      end
+    end
+    return_val
+  end
+  
   
   def turn
     
@@ -80,6 +90,6 @@ class TicTacToe
     end  
   end
 
-  
+
   
 end
