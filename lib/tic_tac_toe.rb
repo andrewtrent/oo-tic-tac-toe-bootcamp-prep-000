@@ -70,7 +70,7 @@ class TicTacToe
   def turn
     puts INPUT_PROMPT
     @choice = gets.chomp
-    @choice = input_to_index(@choice)
+    input_to_index(@choice)
     valid_move?(@choice)
     if !@truthiness
       puts INVALID_INPUT
