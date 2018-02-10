@@ -68,7 +68,7 @@ class TicTacToe
   
   
   def turn
-    @choice = gets.chomp
+    @choice = gets
     input_to_index(@choice)
     
     if !valid_move?(@choice)
