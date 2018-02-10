@@ -75,7 +75,7 @@ class TicTacToe
     if !@truthiness
       puts INVALID_INPUT
     else
-      move(board, choice, char = current_player(board))
+      move(@choice, current_player)
       display_board
     end  
   end
