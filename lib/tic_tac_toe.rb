@@ -67,4 +67,19 @@ class TicTacToe
   end
   
   
+  def turn
+    puts INPUT_PROMPT
+    @choice = gets.chomp
+    @choice = input_to_index(choice)
+    truthiness = valid_move?(choice)
+    if !@truthiness
+      puts INVALID_INPUT
+      turn
+    else
+      move(board, choice, char = current_player(board))
+      display_board(board)
+    end  
+  end
+  
+  
 end
