@@ -55,7 +55,7 @@ class TicTacToe
   end
   
   def valid_move?(index)
-    if move_on_board?(@board, index) && !position_taken?(@board, index)
+    if move_on_board?(@board, index) && !position_taken?(index)
       true
     else
       false
