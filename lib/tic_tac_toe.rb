@@ -76,6 +76,23 @@ class TicTacToe
     return_val
   end
   
+  def won?(board)
+   
+    # set return variable to default value. By default nobody has won.
+    return_val = false
+
+    #drop down a level in the array of winning combinations
+    WIN_COMBINATIONS.each do |comb| 
+  
+    # pass tests for "X" and "O" to #all? 
+    if comb.all? {|space| board[space] == "X"} || comb.all? {|space| board[space] == "O"}
+      return_val = comb
+    end
+    #return new return value
+    return_val
+  end
+    
+  
   def draw?
     if !won? && full?
       true
