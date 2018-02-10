@@ -84,9 +84,10 @@ class TicTacToe
     #drop down a level in the array of winning combinations
     WIN_COMBINATIONS.each do |comb| 
   
-    # pass tests for "X" and "O" to #all? 
-    if comb.all? {|space| board[space] == "X"} || comb.all? {|space| board[space] == "O"}
-      return_val = comb
+      # pass tests for "X" and "O" to #all? 
+      if comb.all? {|space| board[space] == "X"} || comb.all? {|space| board[space] == "O"}
+        return_val = comb
+      end
     end
     #return new return value
     return_val
