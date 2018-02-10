@@ -71,8 +71,8 @@ class TicTacToe
     puts INPUT_PROMPT
     @choice = gets.chomp
     input_to_index(@choice)
-    valid_move?(@choice)
-    if !@truthiness
+    
+    if !valid_move?(@choice)
       puts INVALID_INPUT
     else
       move(@choice, current_player)
