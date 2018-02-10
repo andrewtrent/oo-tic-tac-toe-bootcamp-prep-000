@@ -76,7 +76,7 @@ class TicTacToe
       puts INVALID_INPUT
     else
       move(board, choice, char = current_player(board))
-      display_board(board)
+      display_board
     end  
   end
   
