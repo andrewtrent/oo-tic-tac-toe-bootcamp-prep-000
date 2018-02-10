@@ -127,7 +127,7 @@ class TicTacToe
     end
   end
   
-  def turn(@board)
+  def turn(board)
     puts INPUT_PROMPT
     @choice = gets.chomp
     @choice = input_to_index(choice)
