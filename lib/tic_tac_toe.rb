@@ -62,8 +62,8 @@ class TicTacToe
     end
   end
   
-  def move(index)
-    @board[index] = current_player
+  def move(index, char)
+    @board[index] = char
   end
   
   
