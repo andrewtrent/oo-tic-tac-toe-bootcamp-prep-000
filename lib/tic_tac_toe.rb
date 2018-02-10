@@ -42,8 +42,8 @@ class TicTacToe
     @index = input.to_i - 1
   end
   
-  def move_on_board?(board, index)
-    if @index >= 0 && @index <= 8
+  def move_on_board?(index)
+    if index >= 0 && index <= 8
       true 
     else
       false
