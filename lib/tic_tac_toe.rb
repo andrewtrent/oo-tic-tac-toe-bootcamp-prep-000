@@ -85,7 +85,7 @@ class TicTacToe
     WIN_COMBINATIONS.each do |comb| 
   
       # pass tests for "X" and "O" to #all? 
-      if comb.all? {|space| board[space] == "X"} || comb.all? {|space| board[space] == "O"}
+      if comb.all? {|space| @board[space] == "X"} || comb.all? {|space| board[space] == "O"}
         return_val = comb
       end
     end
