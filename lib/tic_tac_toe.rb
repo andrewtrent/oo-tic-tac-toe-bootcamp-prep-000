@@ -112,9 +112,9 @@ class TicTacToe
 
   def winner
     if won?
-      board[won?[0]]
+      @board[won?[0]]
     elsif draw?
-      board[won?[0]]
+      @board[won?[0]]
     end
   end
   
