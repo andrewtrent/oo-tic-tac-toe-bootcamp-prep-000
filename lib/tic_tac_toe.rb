@@ -72,7 +72,7 @@ class TicTacToe
     
     if !valid_move?(@choice)
       puts INVALID_INPUT
-      
+      turn
     else
       move(@choice, current_player)
       display_board
