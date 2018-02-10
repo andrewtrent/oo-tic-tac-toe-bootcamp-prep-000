@@ -76,7 +76,7 @@ class TicTacToe
     return_val
   end
   
-  def won?(board)
+  def won?
    
     # set return variable to default value. By default nobody has won.
     return_val = false
