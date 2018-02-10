@@ -46,8 +46,8 @@ class TicTacToe
       @index = input.to_i - 1
     end
 
-    def move(@board, @index, @token)
-      @board[@index] = @token
+    def move(board, index, token)
+      @board[index] = token
     end
     
     def move_on_board?(board, index)
@@ -58,11 +58,11 @@ class TicTacToe
       end
     end 
 
-    def position_taken?(@board, @index)
+    def position_taken?(board, index)
       !(@board[@index].nil? || @board[@index] == " ")
     end
   
-    def valid_move?(@board, @index)
+    def valid_move?(board, index)
       # apply both tests and return the result
       if move_on_board?(@board, @index) && !position_taken?(@board, @index)
         true
