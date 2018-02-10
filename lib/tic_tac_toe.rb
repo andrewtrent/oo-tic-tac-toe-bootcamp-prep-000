@@ -66,16 +66,39 @@ class TicTacToe
     @board[index] = char
   end
   
-  def full?(board)
+  def full?
     return_val = true
-    board.each_index do |cell| 
-      if !position_taken?(board, cell)
+    @board.each_index do |cell| 
+      if !position_taken?(cell)
         return_val = false
       end
     end
     return_val
   end
   
+  def draw?
+    if !won? && full?
+      true
+    else 
+      false
+    end
+  end
+
+  def over?
+    if draw? || won?
+      true
+    else
+      false
+    end
+  end
+
+  def winner
+    if won?
+      board[won?[0]]
+    elsif draw?
+      board[won?[0]]
+    end
+  end
   
   def turn
     
